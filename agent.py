@@ -16,7 +16,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = "gemini-pro"
+GEMINI_MODEL = "gemini-2.0-flash"
 GEMINI_ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 
 if not GEMINI_API_KEY:
@@ -367,6 +367,7 @@ def webhook():
 if __name__ == "__main__":
     # Lokalnie możesz odpalić: python agent.py
     app.run(host="0.0.0.0", port=8000, debug=True)
+
 
 
 
